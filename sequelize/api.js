@@ -165,9 +165,8 @@ router.route("/sequelize/create-company")
     .post(async function createCompany({ body }, response) {
         try {
             sequelizeOperationsAPI.validateBody(body, response, async function handleSuccessfulValidation() {
-                if (Object.keys(body).length < 1) {
+                if (Object.keys(body).length < 0) {
                     response.status(500).json("The format is incorrect!");
-
                 }
                 else {
                     await sequelizeOperationsAPI.createCompany(body);
