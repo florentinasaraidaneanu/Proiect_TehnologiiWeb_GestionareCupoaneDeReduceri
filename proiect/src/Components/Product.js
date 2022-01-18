@@ -58,7 +58,7 @@ function Product() {
             }
         }).then((response) => {
             response.json().then((res) => alert(res)).then(_ => {
-                navigate("/coupons");
+                navigate("/products");
             })
         })
     }
